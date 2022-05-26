@@ -1,0 +1,46 @@
+﻿@model DecaLib.ViewModels.LoginViewModel
+
+<div class="medium-container">
+    <h2 class="display-6 text-center">Login</h2>
+    <div class="">
+        <form method="post" asp-action="Login" asp-controller="Account">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label asp-for="Email" class="font-weight-bold"></label>
+            <div class="text-danger"><small><span asp-validation-for="Email"></span></small></div>
+            <div class="input-group mb-3">
+                <input class="form-control" asp-for="Email" placeholder="Email" />
+            </div>
+
+            <label asp-for="Password" class="font-weight-bold"></label>
+            <div class="text-danger"><small><span asp-validation-for="Password"></span></small></div>
+            <div class="input-group mb-3">
+                <input class="form-control" asp-for="Password" placeholder="Password" />
+            </div>
+
+            @*<label asp-for="ConfirmPassword" class="font-weight-bold"></label>
+            <div class="text-danger"><small><span asp-validation-for="ConfirmPassword"></span></small></div>
+            <div class="input-group mb-3">
+                <input class="form-control" asp-for="ConfirmPassword" placeholder="Confirm password" />
+            </div>*@
+
+            <div class="input-group mb-3">
+                <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+            </div>
+
+            <br />
+            <hr />
+            <div class="social-auth-links text-center mb-3">
+                <p class="text-center">- <small><b>OR USE THIRD PARTY</b></small> -</p>
+                @*<a href="#" class="btn btn-block btn-primary">
+                        <i class="fab fa-facebook mr-2"></i> FACEBOOK
+                    </a>*@
+                <a href="#" class="btn btn-block btn-danger">
+                    <i class="fab fa-google-plus mr-2"></i> GOOGLE
+                </a>
+            </div>
+
+            <p class="pull-to-right"> <small><b>Don't have an account? <a asp-action="Register" asp-controller="Account">REGISTER HERE</a></b></small> </p>
+        </form>
+    </div>
+</div>

@@ -10,5 +10,15 @@ namespace DecaLib.Data
         public AppDataContext(DbContextOptions<AppDataContext> options): base(options)
         {
         }
+
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Photo> Photos { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+        }
     }
 }

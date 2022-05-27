@@ -4,7 +4,7 @@ namespace DecaLib.Models
 {
     public class Address
     {
-        [Key]
+        public string AddressId { get; set; }
         public string UserId { get; set; }
         public User User { get; set; }
 

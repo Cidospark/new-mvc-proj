@@ -19,6 +19,17 @@ namespace DecaLib.Data
         {
             base.OnModelCreating(builder);
 
+            builder.Entity<User>()
+                .HasOne<Address>(a => a.Address)
+                .WithOne(u => u.User)
+                .HasForeignKey<Address>(ad => ad.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<User>()
+                .HasMany<Photo>(p => p.Photos)
+                .WithOne(u => u.User)
+                .HasForeignKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

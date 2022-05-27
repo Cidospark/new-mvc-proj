@@ -73,8 +73,18 @@ body {
 
 
 /*----------------my codes---------------*/
-.medium-container{
-    border:1px solid grey;
+.major-container{
+    max-width:800px;
+    min-width:300px;
+    margin:40px auto;
+    padding-top:40px;
+}
+.flex-and-center-vertically{
+    display:flex;
+    align-items:center;
+}
+.medium-container {
+    border: 1px solid grey;
     min-width: 300px;
     max-width: 600px;
     border-radius: 10px;

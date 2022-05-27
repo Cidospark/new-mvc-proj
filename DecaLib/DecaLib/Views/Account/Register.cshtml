@@ -4,7 +4,7 @@
     <h2 class="display-6 text-center">Register</h2>
     <div class="">
         <form method="post" asp-action="Register" asp-controller="Account">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="All" class="text-danger"></div>
 
             <label asp-for="Email" class="font-weight-bold"></label>
             <div class="text-danger"><small><span asp-validation-for="Email"></span></small></div>

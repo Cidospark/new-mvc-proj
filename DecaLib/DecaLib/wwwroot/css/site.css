@@ -85,3 +85,6 @@ body {
 .pull-to-right{
     text-align:right;
 }
+.center-vertically{
+    align-self:center;
+}
